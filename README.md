@@ -38,7 +38,7 @@ Cucumber with TestNG and Selenium starter to use with DigyRunner
 - Run `gradle build`
 
 ## Run the tests
-- Run `gradle digy4DemoTest`
+- Run `gradle digy4DemoCucumberTest`
 
 ## Explore the results in the Digy Dashboard
 - Visit `https://release-saas-sprint-1.dkhmetqbwqyzu.amplifyapp.com/`
