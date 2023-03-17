@@ -4,27 +4,13 @@ plugins {
 
 repositories {
     mavenCentral()
-    maven {
-        url = 's3://digy4-maven-repo/release'
-        credentials(AwsCredentials) {
-            accessKey = System.env.AWS_ACCESS_KEY_ID ?: findProperty('aws_access_key_id')
-            secretKey = System.env.AWS_SECRET_ACCESS_KEY ?: findProperty('aws_secret_access_key')
-        }
-    }
-    maven {
-        url = 's3://digy4-maven-repo/snapshot'
-        credentials(AwsCredentials) {
-            accessKey = System.env.AWS_ACCESS_KEY_ID ?: findProperty('aws_access_key_id')
-            secretKey = System.env.AWS_SECRET_ACCESS_KEY ?: findProperty('aws_secret_access_key')
-        }
-    }
 }
 
 dependencies {
     implementation 'org.slf4j:slf4j-reload4j:2.0.3'
     implementation 'org.seleniumhq.selenium:selenium-java:4.1.2'
-    implementation 'com.digy4:digy-runner-core:0.0.35-SNAPSHOT'
-    implementation 'com.digy4:digy-runner-cucumber-7:0.0.35-SNAPSHOT'
+    implementation 'com.digy4:digy-runner-core:0.0.45'
+    implementation 'com.digy4:digy-runner-cucumber-7:0.0.45'
     implementation 'io.cucumber:cucumber-testng:7.2.3'
 }
 
