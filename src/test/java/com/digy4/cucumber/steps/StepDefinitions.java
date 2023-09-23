@@ -22,4 +22,11 @@ public class StepDefinitions {
                 "Incorrect title encountered in the page.");
     }
 
+    @Given("the user visit project list page")
+    public void visitProjectListPage(){
+        final WebDriver webDriver = Digy4CucumberSupport.getWebDriver();
+        Assert.assertEquals(webDriver.getTitle(), "Home - Digy4",
+                "Incorrect title encountered in the page.");
+    }
+
 }
