@@ -5,11 +5,20 @@ import org.openqa.selenium.WebDriver;
 
 public class ProjectPageFacade {
 
-    ProjectListPage plp = new ProjectListPage();
+    WebDriver driver;
+
+    public ProjectPageFacade(WebDriver driver){
+        this.driver = driver;
+    }
+
+    ProjectListPage plp = new ProjectListPage(driver);
     AssertUtils au = new AssertUtils();
-    public void check(WebDriver driver){
-        plp.clickPlpFilterDropDownButton();
-//        au.assertTrue("Error:!!!");
+    public void check(){
+        String title = plp.plpTitleText();
+        au.assertEqual(title,"Project List","Project List Page Section heading Incorrect.");
+
+        //plp.clickPlpFilterDropDownButton();
+        //au.assertTrue("Error:!!!");
     }
 
 }

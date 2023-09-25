@@ -1,22 +1,24 @@
 package Framework.pages;
 import Framework.utils.LocatorUtils;
-import com.sun.tools.javac.util.List;
+//import com.sun.tools.javac.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import Framework.utils.ActionUtils;
+import java.util.List;
+
 public class ProjectListPage extends LocatorUtils {
 
-    String browser;
-    public ProjectListPage(String browser) {
+    WebDriver browser;
+    public ProjectListPage(WebDriver browser) {
         super(browser);
         this.browser = browser;
     }
     private LocatorUtils lu = new LocatorUtils(browser);
-    private ActionUtils au = new ActionUtils();
+    private ActionUtils au = new ActionUtils(browser);
 
-    List<WebElement> plpListElements = (List<WebElement>) lu.findAllByClassName("css-tdnrhj");
-    WebElement plpSearchBar = lu.findByClassName("chakra-input__group css-4302v8");
+    List<WebElement> plpListElements = lu.findAllByClassName("css-tdnrhj");
+    WebElement plpSearchBarInput = lu.findByClassName("chakra-input css-1wzwj5m");
     WebElement plpSearchButton = lu.findByClassName("chakra-input__right-element css-wss53h");
     WebElement plpFilterDropDownButton = lu.findByClassName("chakra-icon css-1bfokib");
     WebElement plpFilterStatus = lu.findByCssSelector("[data-testid=\"status-filter\"]");
@@ -31,10 +33,7 @@ public class ProjectListPage extends LocatorUtils {
         return au.getElementText(plpSectionTitle);
     }
 
-
     public void enterPlpSearchBar(){
-        au.enterText(plpSearchBar,"lol");
-        A
+        au.enterText(plpSearchBarInput,"lol");
     }
-
 }

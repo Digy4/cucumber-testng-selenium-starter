@@ -3,12 +3,14 @@
 
 
 <suite name="ProjectList">
-    <test name="com.digy4.cucumber.steps.HomePage"
-    
+    <test name="com.digy4.cucumber.steps.ProjectPageStepDefinitions">
+        <classes>
+            <class name="com.digy4.cucumber.DigyTestRunner"/>
+        </classes>
+    </test>
 </suite>
 
-<suite name="CucumberDemoSuite">
-
+<suite name="SanitySuite">
 	<test name="Digy4DemoTest" parallel="methods" thread-count="10">
         <classes>
             <class name="com.digy4.cucumber.DigyTestRunner"/>

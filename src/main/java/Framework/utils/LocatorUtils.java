@@ -8,10 +8,10 @@ import org.openqa.selenium.By;
 public class LocatorUtils extends DriverManager{
 
     WebDriver driver;
-    DriverManager driverManager = new DriverManager();
+//    DriverManager driverManager = new DriverManager();
 
-    public LocatorUtils(String browser) {
-        this.driver =  driverManager.getDriver(browser);
+    public LocatorUtils(WebDriver browser) {
+        this.driver =  browser;
     }
 
     public WebElement findById(String id) {
