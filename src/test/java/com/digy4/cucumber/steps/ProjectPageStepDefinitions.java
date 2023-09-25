@@ -1,12 +1,15 @@
 package com.digy4.cucumber.steps;
 
+import Framework.Facade.ProjectPageFacade;
 import com.digy4.java.cucumber.Digy4CucumberSupport;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
-public class StepDefinitions {
+public class ProjectPageStepDefinitions {
+
+    ProjectPageFacade ppfObj = new ProjectPageFacade();
 
     @Given("a user visit digy4 website")
     public void visitDigy4Website() {
@@ -27,6 +30,8 @@ public class StepDefinitions {
         final WebDriver webDriver = Digy4CucumberSupport.getWebDriver();
         Assert.assertEquals(webDriver.getTitle(), "Home - Digy4",
                 "Incorrect title encountered in the page.");
+        ppfObj.check(webDriver);
+
     }
 
 }
