@@ -21,8 +21,7 @@ public class LoginPage extends LocatorUtils {
     ActionUtils au = new ActionUtils();
 
 
-    WebElement loginPageHeading = lu.findByXPath("//input[@data-testid='userName']");
-
+    WebElement loginPageHeading = lu.findByXPath("//div[starts-with(@id, '__next')] and contains(@class, 'css-edj3ps')");
     WebElement userNameInput = lu.findById("userName");
     WebElement passwordInput = lu.findByName("password");
     WebElement staySignedIn = lu.findById("staySignIn");
