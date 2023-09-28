@@ -2,18 +2,18 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 
-<suite name="ProjectList">
-    <test name="com.digy4.cucumber.steps.ProjectPageStepDefinitions">
+<suite name="LoginPage">
+    <test name="com.digy4.cucumber.steps.LoginPageStepDefinitions">
         <classes>
             <class name="com.digy4.cucumber.DigyTestRunner"/>
         </classes>
     </test>
 </suite>
 
-<suite name="SanitySuite">
-	<test name="Digy4DemoTest" parallel="methods" thread-count="10">
-        <classes>
-            <class name="com.digy4.cucumber.DigyTestRunner"/>
-        </classes>
-    </test>
-</suite> 
+<!--<suite name="SanitySuite">-->
+<!--	<test name="Digy4DemoTest" parallel="methods" thread-count="10">-->
+<!--        <classes>-->
+<!--            <class name="com.digy4.cucumber.DigyTestRunner"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--</suite> -->

@@ -1,41 +1,7 @@
-2023-09-25 10:18:31,382 -0400 [main] ERROR (DigyUtils.java:442) - statusCode = 400.0
-2023-09-25 10:18:31,384 -0400 [main] ERROR (DigyUtils.java:443) - message = Incorrect username or password.
-2023-09-25 10:18:31,384 -0400 [main] ERROR (DigyUtils.java:363) - Reporting to Digy Dashboard will be skipped due to : Incorrect username or password.
-2023-09-25 10:18:32,900 -0400 [main] ERROR (WebDriverInitialize.java:62) - Webdriver initialization failed.
-org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: com.ssts.exception.ConnectError : Capability 'clientName' is mandatory 
-Host info: host: 'BHUPINDER-LAPTO', ip: '192.168.2.12'
-Build info: version: '4.8.3', revision: 'e5e76298c3'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '20'
-Driver info: com.digy4.java.core.Digy4RemoteWebDriver
-Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, browserVersion: 1110, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}, goog:loggingPrefs: org.openqa.selenium.logging..., os: Windows, osVersion: 10, pCloudy_EnableVideo: true, webdriver.logging.profiler.enabled: true}], desiredCapabilities=Capabilities {browserName: chrome, browserVersion: 1110, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}, goog:loggingPrefs: org.openqa.selenium.logging..., os: Windows, osVersion: 10, pCloudy_EnableVideo: true, webdriver.logging.profiler.enabled: true}}]
-Capabilities {browserName: chrome, browserVersion: 1110, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}, goog:loggingPrefs: org.openqa.selenium.logging..., os: Windows, osVersion: 10, pCloudy_EnableVideo: true, webdriver.logging.profiler.enabled: true}
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:148)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:106)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:67)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:165)
-	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at com.digy4.java.core.Digy4RemoteWebDriver.execute(Digy4RemoteWebDriver.java:85)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:229)
-	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:157)
-	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:139)
-	at com.digy4.java.core.Digy4RemoteWebDriver.<init>(Digy4RemoteWebDriver.java:43)
-	at com.digy4.java.core.WebDriverInitialize.intializeWebDriver(WebDriverInitialize.java:59)
-	at com.digy4.java.cucumber.Digy4CucumberSupport.sendResultsSummary(Digy4CucumberSupport.java:150)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
-	at io.cucumber.java.Invoker.invokeStatic(Invoker.java:80)
-	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:45)
-	at io.cucumber.java.JavaStaticHookDefinition.execute(JavaStaticHookDefinition.java:49)
-	at io.cucumber.core.runner.Runner.executeHook(Runner.java:112)
-	at io.cucumber.core.runner.Runner.lambda$executeHooks$2(Runner.java:99)
-	at io.cucumber.core.runner.ThrowableCollector.execute(ThrowableCollector.java:21)
-	at io.cucumber.core.runner.Runner.executeHooks(Runner.java:99)
-	at io.cucumber.core.runner.Runner.runAfterAllHooks(Runner.java:93)
-	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
-	at io.cucumber.core.runtime.CucumberExecutionContext.runAfterAllHooks(CucumberExecutionContext.java:112)
-	at io.cucumber.core.runtime.Runtime.execute(Runtime.java:94)
-	at io.cucumber.core.runtime.Runtime.run(Runtime.java:84)
-	at io.cucumber.core.cli.Main.run(Main.java:87)
-	at io.cucumber.core.cli.Main.main(Main.java:30)
+2023-09-28 12:41:13,109 -0400 [main] INFO  (DigyUtils.java:555) - Received Driver instance as: Digy4EdgeDriver: msedge on WINDOWS (b7a1eeeb68a1865ba7ea4b23b3a3711d)
+2023-09-28 12:41:13,792 -0400 [main] INFO  (DigyRunner.java:164) - Digy Runner Send Result Summary - Init: TestResultSummary: e715ec4c-8274-4f26-95ab-c70f9ac79088 http://localhost:4444 localhost Digydashboardtest#DigyEngineeringTeam#AUTO-149259c3-8c56-4e4f-a012-72a23e95d897 Digydashboardtest DigyEngineeringTeam AUTO-149259c3-8c56-4e4f-a012-72a23e95d897 Sanity 1.0 msedge 117.0.2045.43 0 0 0 0 1695919273790 1695919273792 2 InProgress cucumber dev DashboardUI NA NA NA NA LOCAL  b5e804fb-06f4-460b-978f-d62536b08ce3 
+2023-09-28 12:41:24,874 -0400 [main] INFO  (S3UploadUtils.java:265) - screenshot.png Multipart Upload Complete Response: {"message":"Multipart Upload Completed Successfully: [object Object]"}
+2023-09-28 12:41:25,343 -0400 [main] INFO  (S3UploadUtils.java:265) - video.mp4 Multipart Upload Complete Response: {"message":"Multipart Upload Completed Successfully: [object Object]"}
+2023-09-28 12:41:25,828 -0400 [pool-9-thread-1] INFO  (S3UploadUtils.java:265) - driver_log.txt Multipart Upload Complete Response: {"message":"Multipart Upload Completed Successfully: [object Object]"}
+2023-09-28 12:41:30,526 -0400 [main] INFO  (S3UploadUtils.java:265) - terminal_log.txt Multipart Upload Complete Response: {"message":"Multipart Upload Completed Successfully: [object Object]"}
+2023-09-28 12:41:30,527 -0400 [main] ERROR (DigyUtils.java:637) - Terminal logs could not be captured.java.io.IOException: Unable to delete file: logs\terminal_log.txt

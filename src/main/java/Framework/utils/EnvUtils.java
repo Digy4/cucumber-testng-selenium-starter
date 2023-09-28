@@ -1,8 +1,8 @@
 package Framework.utils;
 public class EnvUtils {
     // Define URLs for different environments
-    public static final String DEV_URL = "https://dev.example.com";
-    public static final String PROD_URL = "https://www.example.com";
+    public static final String DEV_URL = "";
+    public static final String PROD_URL = "https://dashboard.digy4.com/";
     public static final String STAGING_URL = "https://dashboard-test.digy4.com/";
 
     // Define credentials for different users
@@ -17,7 +17,7 @@ public class EnvUtils {
         switch (environmentType) {
             case "DEV":
                 return DEV_URL;
-            case "QA":
+            case "STAGING":
                 return STAGING_URL;
             case "PROD":
                 return PROD_URL;

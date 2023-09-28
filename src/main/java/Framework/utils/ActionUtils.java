@@ -1,15 +1,19 @@
 package Framework.utils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 public class ActionUtils {
-    private WebDriver driver;
-    private Actions actions;
+    WebDriver driver;
+    Actions actions;
 
     public ActionUtils(WebDriver driver) {
         this.driver = driver;
         this.actions = new Actions(driver);
+    }
+
+    public ActionUtils() {
     }
 
     // Click an element
