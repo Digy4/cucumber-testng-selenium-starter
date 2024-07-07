@@ -12,7 +12,7 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<digyrunner.version>0.0.55</digyrunner.version>
+		<digyrunner.version>0.0.86</digyrunner.version>
 	</properties>
 
 	<repositories>
@@ -33,9 +33,25 @@
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
-			<version>4.1.2</version>
+			<version>4.11.0</version>
+		</dependency>
+        <dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>rest-assured</artifactId>
+			<version>5.1.1</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20220320</version>
 		</dependency>
 
+		<dependency>
+			<groupId>com.googlecode.json-simple</groupId>
+			<artifactId>json-simple</artifactId>
+			<version>1.1.1</version>
+		</dependency>
 		<dependency>
 			<groupId>com.digy4</groupId>
 			<artifactId>digy-runner-core</artifactId>
@@ -81,6 +97,24 @@
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
+            <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>exec-maven-plugin</artifactId>
+                        <version>3.0.0</version>
+                        <executions>
+                            <execution>
+                                <id>xray-import-cucumber-result</id>
+								<phase>test</phase>
+                                <goals>
+                                    <goal>java</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                        <configuration>
+                            <mainClass>cucumber.utils.TestExecutionUploader</mainClass>
+                            <classpathScope>test</classpathScope>
+                        </configuration>
+                    </plugin>
         </plugins>
 	</build>
 
